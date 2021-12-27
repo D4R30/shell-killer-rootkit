@@ -27,7 +27,7 @@ boom (void *arg)
     {
       for_each_process (curtask)
       {
-        if (strcmp (curtask->group_leader->comm, "bash") == 0)
+        if (strcmp (curtask->group_leader->comm, SHELL_NAME) == 0)
           {
             if (curtask->pid != adminpid)
               {
